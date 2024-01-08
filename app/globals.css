@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+}
+
+.techhero {
+  background-image: linear-gradient(to top, #12121138, #0d0c0c9c),
+    url('/techhero.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+}
+
+.techhero1 {
+  background-image: url('/techhero.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  /* width: 100%; */
+}
+
+@media (max-width: 768px) {
+  .techhero {
+    background-size: calc(310%);
+  }
+}
