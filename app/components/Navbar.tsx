@@ -60,7 +60,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     href={'/'}
-                    className="cursor-pointer hover:text-[#1f8851]"
+                    className="cursor-pointer hover:text-green-500"
                   >
                     Domov
                   </Link>
@@ -69,7 +69,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     href={'/about'}
-                    className="cursor-pointer hover:text-[#1f8851]"
+                    className="cursor-pointer hover:text-green-500"
                   >
                     Kto sme
                   </Link>
@@ -77,7 +77,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     href={'/contact'}
-                    className="cursor-pointer hover:text-[#1f8851]"
+                    className="cursor-pointer hover:text-green-500"
                   >
                     Príď medzi nás
                   </Link>
@@ -85,7 +85,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     href={'/contact'}
-                    className="cursor-pointer hover:text-[#1f8851]"
+                    className="cursor-pointer hover:text-green-500"
                   >
                     Repertoár
                   </Link>
@@ -93,7 +93,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     href={'/contact'}
-                    className="cursor-pointer hover:text-[#1f8851]"
+                    className="cursor-pointer hover:text-green-500"
                   >
                     Nahrávky a ukážky
                   </Link>
@@ -101,7 +101,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     href={'/contact'}
-                    className="cursor-pointer hover:text-[#1f8851]"
+                    className="cursor-pointer hover:text-green-500"
                   >
                     História
                   </Link>
@@ -109,7 +109,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     href={'/contact'}
-                    className="cursor-pointer hover:text-[#1f8851]"
+                    className="cursor-pointer hover:text-green-500"
                   >
                     Osobnosti
                   </Link>
@@ -117,7 +117,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     href={'/contact'}
-                    className="cursor-pointer hover:text-[#1f8851]"
+                    className="cursor-pointer hover:text-green-500"
                   >
                     Členovia
                   </Link>
@@ -125,7 +125,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     href={'/contact'}
-                    className="cursor-pointer hover:text-[#1f8851]"
+                    className="cursor-pointer hover:text-green-500"
                   >
                     Zájazdy
                   </Link>
