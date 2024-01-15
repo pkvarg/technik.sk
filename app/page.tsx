@@ -5,7 +5,7 @@ import MailingList from './components/MailingList';
 export default function Home() {
   return (
     <main className="relative bg-[#0d0d0e]">
-      <div className="techhero h-[100vh]">
+      <div className="techhero lg::h-[100vh] h-screen">
         <Navbar />
         <h1 className="pl-8 text-[45px] font-bold leading-[45px] text-white lg:pl-[8%] lg:pt-8 lg:leading-[75px]">
           {' '}
