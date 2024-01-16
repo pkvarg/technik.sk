@@ -1,15 +1,20 @@
 import React from 'react';
-import { signIn } from '../libs/auth';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '../utils/auth';
+//import { signIn } from '../libs/auth';
 
 const email = 'pkvarg@yahoo.se';
 const password = '123';
 
 const login = async (e: any) => {
   e.preventDefault();
-  await signIn('credentials', { email, password, redirect: false });
+  //await signIn('credentials', { email, password, redirect: false });
 };
 
-const page = () => {
+const page = async () => {
+  const session = await getServerSession(authOptions);
+
+  console.log(session);
   // const [email, setEmail] = useState('');
   // const [password, setPassword] = useState('');
 
