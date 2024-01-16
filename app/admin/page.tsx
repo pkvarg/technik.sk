@@ -1,44 +1,26 @@
-'use client';
-import React, { useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '../utils/auth';
+import SignInButton from '../components/SignInButton';
+import AdminBoard from '../components/AdminBoard';
 
-const page = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+const Admin = async () => {
+  const session = await getServerSession(authOptions);
+  const name = session?.user?.name ? session.user.name.toString() : 'user';
 
-  const createUser = async (e: any) => {
-    e.preventDefault();
-    const res = await axios.put('api/user', {
-      name,
-      email,
-    });
-    console.log(res);
-  };
+  console.log('admin session', session);
 
   return (
-    <div className="h-[100vh] bg-black text-white">
-      <p>Create user</p>
-      <form onSubmit={createUser} className="flex w-[25%] flex-col gap-2">
-        <input
-          type="text"
-          value={name}
-          placeholder="name"
-          onChange={(e) => setName(e.target.value)}
-          className="pl-1 text-blue-950"
-        />
-        <input
-          type="text"
-          value={email}
-          placeholder="email"
-          onChange={(e) => setEmail(e.target.value)}
-          className="pl-1 text-blue-950"
-        />
-        <button type="submit" className="cursor-pointer text-green-500">
-          Create
-        </button>
-      </form>
+    <div className="h-[100vh]">
+      {!session ? (
+        <SignInButton />
+      ) : (
+        <div className=" bg-black text-white">
+          <AdminBoard name={name} />
+        </div>
+      )}
     </div>
   );
 };
 
-export default page;
+export default Admin;

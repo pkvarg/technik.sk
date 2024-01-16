@@ -2,13 +2,14 @@ import prisma from '@/app/libs/prismadb';
 import { NextResponse } from 'next/server';
 
 export async function PUT(req: Request) {
+  const { email } = await req.json();
+
+  console.log('meth', req.method);
+
   if (req.method !== 'PUT') {
     return NextResponse.json({ message: 'Wrong method!' });
   }
-  const { email } = await req.json();
-
   try {
-    console.log(email, process.env.DATABASE_URL);
     const sub = await prisma.subscriber.create({
       data: {
         email,
@@ -19,5 +20,17 @@ export async function PUT(req: Request) {
   } catch (error) {
     console.log(error);
     return NextResponse.json({ error });
+  }
+}
+
+export async function GET(req: Request) {
+  if (req.method === 'GET') {
+    try {
+      const subcribers = await prisma.subscriber.findMany();
+      return NextResponse.json(subcribers);
+    } catch (error) {
+      console.log(error);
+      return NextResponse.json({ error });
+    }
   }
 }
