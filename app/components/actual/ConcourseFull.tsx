@@ -4,18 +4,18 @@ import EmailTel from './EmailTel';
 
 const ConcourseFull = () => {
   return (
-    <div className="px-8">
+    <div className="px-[20%]">
       <div className="flex flex-row items-center justify-center gap-8">
-        <div className="w-[50%]">
+        <div className="w-[40%]">
           <Image
-            src={'/concoursebg.jpg'}
+            src={'/concoursef.jpg'}
             alt="technik"
             width={900}
             height={900}
             className="w-[100%]"
           />
         </div>
-        <div className="w-[50%]">
+        <div className="w-[60%]">
           {' '}
           <h1 className="text-center text-[25px] text-green-500">
             Príď medzi nás
@@ -44,7 +44,7 @@ const ConcourseFull = () => {
         </div>
       </div>
       <div className="flex flex-row gap-8 py-4">
-        <div className="w-[50%]">
+        <div className="w-[40%]">
           <p className="mt-4 text-justify">
             Príležitostne okrem toho mávame počas sezóny aj víkendové
             sústredenie. Vystúpenia máme asi raz za dva mesiace (väčšinou v
@@ -60,7 +60,7 @@ const ConcourseFull = () => {
           </p>
         </div>
 
-        <div className="flex w-[50%] items-center justify-center">
+        <div className="flex w-[60%] items-center justify-center">
           <EmailTel />
         </div>
       </div>

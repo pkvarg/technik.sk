@@ -50,7 +50,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className="mr-[4%]">
+          <div className="">
             <div
               className={`mt-8 h-[80vh] flex-1 justify-self-center pb-3 md:mt-0 md:block md:pb-0 lg:h-auto ${
                 navbar ? 'block' : 'hidden'
@@ -110,14 +110,7 @@ const Navbar = () => {
                     </Link>
                   </div>
                 </div>
-                <li>
-                  {/* <Link
-                    href={'/contact'}
-                    className="cursor-pointer hover:text-green-500"
-                  >
-                    Príď medzi nás
-                  </Link> */}
-                </li>
+
                 <li>
                   <Link
                     href={'/contact'}
@@ -126,9 +119,7 @@ const Navbar = () => {
                     Galéria
                   </Link>
                 </li>
-                <li></li>
-                <li></li>
-                <li></li>
+
                 <li>
                   <Link
                     href={'/contact'}
@@ -136,14 +127,6 @@ const Navbar = () => {
                   >
                     Kontakt
                   </Link>
-                </li>
-                <li>
-                  {/* <Link
-                    href={'/contact'}
-                    className="cursor-pointer hover:text-[#1f8851]"
-                  >
-                    Partneri
-                  </Link> */}
                 </li>
               </ul>
             </div>

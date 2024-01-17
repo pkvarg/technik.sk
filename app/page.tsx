@@ -9,8 +9,11 @@ export default function Home() {
   const slides = ['/techhero.jpg', '/techslide2.png', '/techslide3.jpg'];
 
   return (
-    <main className="relative bg-[#0d0d0e]">
+    <main className="relative  bg-[#0d0e2f]">
       <div className="techhero h-screen lg:h-[100vh]">
+        {/* <div className="absolute left-1/2 w-[100%] -translate-x-1/2 transform">
+          <Carousel slides={slides} />
+        </div> */}
         <Navbar />
         <h1 className="pl-8 text-[45px] font-bold leading-[45px] text-white lg:pl-[8%] lg:pt-8 lg:leading-[75px]">
           {' '}

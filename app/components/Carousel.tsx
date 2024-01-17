@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { FaArrowCircleRight, FaArrowCircleLeft } from 'react-icons/fa';
 
 type CarouselProps = {
@@ -39,7 +40,7 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
         style={{ transform: `translateX(-${current * 100}%)` }}
       >
         {slides.map((slide: string) => (
-          <img src={slide} alt="technik" key={slide} />
+          <img src={slide} alt="technik" key={slide} className="" />
         ))}
       </div>
       {/* <div className="absolute top-0 flex h-full w-full items-center justify-between px-10 text-3xl text-[#000000]">

@@ -22,7 +22,9 @@ const Actual = () => {
   return (
     <div className="bg-black text-white">
       <Navbar />
-      <h1 className="py-8 text-center text-[30px]">Aktuálne</h1>
+      <h1 className="pb-16 pt-4 text-center text-[30px] text-yellow-500">
+        Aktuálne
+      </h1>
       <div id="concourse">
         <ConcourseFull />
       </div>
