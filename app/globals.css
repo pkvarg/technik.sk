@@ -15,8 +15,9 @@ body {
   width: 100%;
 }
 
-.techhero1 {
-  background-image: url('/techhero.jpg');
+.concourse {
+  background-image: linear-gradient(to top, #12121138, #0d0c0c9c),
+    url('/concoursebg.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
