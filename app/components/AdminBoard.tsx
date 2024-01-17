@@ -3,20 +3,38 @@ import React, { useEffect, useState } from 'react';
 import SignOutButton from '../components/SignOutButton';
 import CreateUserForm from '../components/CreateUserForm';
 import Subscribers from './Subscribers';
+import MyProfile from './MyProfile';
+import axios from 'axios';
 
-const AdminBoard = (name: any) => {
+const AdminBoard = (user: any) => {
   const [showCreateUser, setShowCreateUser] = useState(false);
   const [showSubscribers, setShowSubscribers] = useState(false);
+  const [showMyProfile, setShowMyProfile] = useState(false);
+  const [myUser, setMyUser] = useState({});
+
+  console.log('ab', user);
+  const email = user.user.email.toString();
 
   useEffect(() => {
-    if (showCreateUser) setShowSubscribers(false);
-    if (showSubscribers) setShowCreateUser(false);
-  }, [showCreateUser, showSubscribers]);
+    const getUser = async () => {
+      const res = await axios.get(`api/user/`, email);
+
+      if (res) console.log('res', res);
+    };
+    getUser();
+  }, []);
+
+  // useEffect(() => {
+  //   if (showCreateUser) setShowSubscribers(false);
+  //   if (showSubscribers) setShowCreateUser(false);
+  // }, [showCreateUser, showSubscribers]);
 
   return (
     <div className="relative h-screen">
       <div className="flex w-[20%] flex-col gap-1 bg-gray-600 p-1 text-green-500">
-        <h1 className="text-white">Ahoj {name.name}</h1>
+        <h1 className="text-white">
+          Ahoj {user.user.name} {user.user.email}
+        </h1>
         <p
           onClick={() => setShowCreateUser((prev) => !prev)}
           className="cursor-pointer"
@@ -30,6 +48,12 @@ const AdminBoard = (name: any) => {
         >
           Odoberatelia noviniek{' '}
         </p>
+        <p
+          onClick={() => setShowMyProfile((prev) => !prev)}
+          className="cursor-pointer"
+        >
+          Môj profil{' '}
+        </p>
         <SignOutButton />
       </div>
 
@@ -42,6 +66,12 @@ const AdminBoard = (name: any) => {
       {showSubscribers && (
         <div className="absolute right-[33%]">
           <Subscribers />
+        </div>
+      )}
+
+      {showMyProfile && (
+        <div className="absolute right-[33%]">
+          <MyProfile />
         </div>
       )}
     </div>

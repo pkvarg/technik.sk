@@ -24,6 +24,10 @@ body {
   /* width: 100%; */
 }
 
+.form-control {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .techhero {
     background-size: calc(310%);

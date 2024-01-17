@@ -16,7 +16,7 @@ const CreateUserForm = () => {
   };
 
   return (
-    <div className="my-4 bg-black text-white">
+    <div className="my-4 bg-[#0d0e2f] text-white">
       <p className="text-yellow-500">Vytvoriť nového užívateľa</p>
       <form onSubmit={createUser} className="mt-2 flex w-[100%] flex-col gap-2">
         <input

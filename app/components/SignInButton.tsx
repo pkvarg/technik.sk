@@ -12,7 +12,7 @@ const SignInButton = () => {
             callbackUrl: `${window.location.origin}/admin`,
           })
         }
-        className="cursor-pointer text-green-500"
+        className="cursor-pointer p-8 text-[30px] text-green-500"
       >
         Login
       </button>

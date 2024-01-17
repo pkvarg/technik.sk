@@ -113,7 +113,7 @@ const Navbar = () => {
 
                 <li>
                   <Link
-                    href={'/contact'}
+                    href={'/gallery'}
                     className="cursor-pointer hover:text-green-500"
                   >
                     Galéria

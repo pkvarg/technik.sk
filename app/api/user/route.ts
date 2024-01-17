@@ -31,3 +31,29 @@ export async function PUT(req: Request) {
     return NextResponse.json({ error });
   }
 }
+
+export async function GET(req: Request) {
+  if (req.method !== 'GET') {
+    return NextResponse.json({ message: 'Wrong method!' });
+  }
+
+  console.log('get here');
+
+  const { email } = await req.json();
+
+  console.log(email);
+
+  try {
+    console.log('try');
+    // const user = await prisma.user.findUnique({
+    //   where: {
+    //     email,
+    //   },
+    //});
+
+    return NextResponse.json('ok');
+  } catch (error) {
+    console.log(error);
+    return NextResponse.json({ error });
+  }
+}
