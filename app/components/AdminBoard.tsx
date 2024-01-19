@@ -12,7 +12,6 @@ const AdminBoard = (user: any) => {
   const [showMyProfile, setShowMyProfile] = useState(false);
   const [myUser, setMyUser] = useState({});
 
-  console.log('ab', user);
   const email = user.user.email.toString();
 
   useEffect(() => {
@@ -27,16 +26,12 @@ const AdminBoard = (user: any) => {
     getUser();
   }, []);
 
-  // useEffect(() => {
-  //   if (showCreateUser) setShowSubscribers(false);
-  //   if (showSubscribers) setShowCreateUser(false);
-  // }, [showCreateUser, showSubscribers]);
-
   return (
     <div className="relative h-screen">
       <div className="flex w-[20%] flex-col gap-1 bg-gray-600 p-1 text-green-500">
-        <h1 className="text-white">
-          Ahoj {user.user.name} {user.user.email}
+        <h1 className="text-[25px] text-white">
+          Ahoj
+          <span className="pl-2  text-yellow-500">{user.user.name}</span>
         </h1>
         <p
           onClick={() => setShowCreateUser((prev) => !prev)}
@@ -62,18 +57,36 @@ const AdminBoard = (user: any) => {
 
       {showCreateUser && (
         <div className="absolute right-[33%]">
+          <p
+            onClick={() => setShowCreateUser(false)}
+            className="float-right cursor-pointer text-red-500"
+          >
+            X
+          </p>
           <CreateUserForm />
         </div>
       )}
 
       {showSubscribers && (
         <div className="absolute right-[33%]">
+          <p
+            onClick={() => setShowSubscribers(false)}
+            className="float-right cursor-pointer text-red-500"
+          >
+            X
+          </p>
           <Subscribers />
         </div>
       )}
 
       {showMyProfile && (
         <div className="absolute right-[33%]">
+          <p
+            onClick={() => setShowMyProfile(false)}
+            className="float-right cursor-pointer text-red-500"
+          >
+            X
+          </p>
           <MyProfile myUser={myUser} />
         </div>
       )}

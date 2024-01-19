@@ -18,7 +18,9 @@ const Subscribers = () => {
 
   return (
     <div>
-      <h1 className="text-green-500">Odoberatelia noviniek</h1>
+      <h1 className="py-8 text-center text-[25px] leading-[25px] text-green-500">
+        Odoberatelia noviniek
+      </h1>
       {subscribers &&
         subscribers.map((subscriber: any) => (
           <p key={subscriber?.id}>{subscriber.email}</p>

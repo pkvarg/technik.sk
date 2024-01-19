@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import axios from 'axios';
+import toast from 'react-hot-toast';
 
 const CreateUserForm = () => {
   const [name, setName] = useState('');
@@ -8,16 +9,24 @@ const CreateUserForm = () => {
 
   const createUser = async (e: any) => {
     e.preventDefault();
-    const res = await axios.post('api/user', {
-      name,
-      email,
-    });
-    console.log(res);
+    try {
+      const res = await axios.post('api/user', {
+        name,
+        email,
+      });
+      console.log(res);
+      //if (res.statusText === 'OK') toast.success('Užívateľ vytvorený');
+    } catch (error: any) {
+      console.log(error);
+      toast.error(error.message);
+    }
   };
 
   return (
     <div className="my-4 bg-[#0d0e2f] text-white">
-      <p className="text-yellow-500">Vytvoriť nového užívateľa</p>
+      <p className="text-center text-[25px] leading-[25px] text-yellow-500">
+        Vytvoriť nového užívateľa
+      </p>
       <form onSubmit={createUser} className="mt-2 flex w-[100%] flex-col gap-2">
         <input
           type="text"

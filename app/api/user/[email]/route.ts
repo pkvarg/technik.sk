@@ -34,20 +34,46 @@ export async function PUT(req: Request, context: any) {
   const { name, password, isAdmin } = await req.json();
 
   console.log('body', name, password, isAdmin);
+  let hashedPassword = '';
 
-  try {
-    console.log('edit bck');
-    const user = await prisma.user.update({
-      where: {
-        email: email,
-      },
+  if (password) {
+    hashedPassword = await hashPassword(password);
+    try {
+      console.log('edit bck');
+      const user = await prisma.user.update({
+        where: {
+          email: email,
+        },
 
-      data: {},
-    });
+        data: {
+          name,
+          hashedPassword,
+          isAdmin,
+        },
+      });
 
-    return NextResponse.json('OK');
-  } catch (error) {
-    console.log(error);
-    return NextResponse.json({ error });
+      return NextResponse.json(user);
+    } catch (error) {
+      console.log(error);
+      return NextResponse.json({ error });
+    }
+  } else {
+    try {
+      const user = await prisma.user.update({
+        where: {
+          email: email,
+        },
+
+        data: {
+          name,
+          isAdmin,
+        },
+      });
+
+      return NextResponse.json(user);
+    } catch (error) {
+      console.log(error);
+      return NextResponse.json({ error });
+    }
   }
 }

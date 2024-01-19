@@ -39,7 +39,9 @@ const MyProfile = (myUser: any) => {
       onSubmit={handleEdit}
       className="flex w-[200px] flex-col gap-2 text-black"
     >
-      <h1 className="my-4 text-yellow-500">Moj profil</h1>
+      <h1 className="my-4 text-center text-[25px] leading-[25px] text-yellow-500">
+        Môj profil
+      </h1>
       <label className="text-white">Meno</label>
       <input
         type="text"

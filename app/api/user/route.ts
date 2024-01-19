@@ -17,6 +17,17 @@ export async function POST(req: Request) {
   if (defaultPassword) hashedPassword = await hashPassword(defaultPassword);
 
   try {
+    const existingUser = await prisma.user.findFirst({
+      where: {
+        email,
+      },
+    });
+
+    if (existingUser)
+      return new NextResponse(JSON.stringify({ error: 'Conflict' }), {
+        status: 500,
+      });
+
     const user = await prisma.user.create({
       data: {
         name,
