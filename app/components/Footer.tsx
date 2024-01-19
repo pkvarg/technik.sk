@@ -80,6 +80,12 @@ const Footer = () => {
             >
               Kontakt
             </Link>
+            <Link
+              href={'/admin'}
+              className="cursor-pointer hover:text-[#1f8851]"
+            >
+              Admin
+            </Link>
           </div>
         </div>
       </div>

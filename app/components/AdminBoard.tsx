@@ -17,9 +17,12 @@ const AdminBoard = (user: any) => {
 
   useEffect(() => {
     const getUser = async () => {
-      const res = await axios.get(`api/user/`, email);
+      const res = await axios.get(`api/user/${email}`);
 
-      if (res) console.log('res', res);
+      if (res) {
+        console.log('res', res.data);
+        setMyUser(res.data);
+      }
     };
     getUser();
   }, []);
