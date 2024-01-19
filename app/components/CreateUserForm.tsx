@@ -8,7 +8,7 @@ const CreateUserForm = () => {
 
   const createUser = async (e: any) => {
     e.preventDefault();
-    const res = await axios.put('api/user', {
+    const res = await axios.post('api/user', {
       name,
       email,
     });

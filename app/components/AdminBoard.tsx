@@ -74,7 +74,7 @@ const AdminBoard = (user: any) => {
 
       {showMyProfile && (
         <div className="absolute right-[33%]">
-          <MyProfile />
+          <MyProfile myUser={myUser} />
         </div>
       )}
     </div>

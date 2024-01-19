@@ -2,8 +2,8 @@ import prisma from '@/app/libs/prismadb';
 import { NextResponse } from 'next/server';
 import { hashPassword } from '@/app/libs/hashPassword';
 
-export async function PUT(req: Request) {
-  if (req.method !== 'PUT') {
+export async function POST(req: Request) {
+  if (req.method !== 'POST') {
     return NextResponse.json({ message: 'Wrong method!' });
   }
   const { name, email } = await req.json();
@@ -31,4 +31,3 @@ export async function PUT(req: Request) {
     return NextResponse.json({ error });
   }
 }
-
