@@ -9,7 +9,7 @@ const SignInButton = () => {
         onClick={() =>
           signIn('Credentials', {
             redirect: false,
-            callbackUrl: `${window.location.origin}/admin`,
+            callbackUrl: `${window.location.origin}/technik`,
           })
         }
         className="cursor-pointer p-8 text-[30px] text-green-500"

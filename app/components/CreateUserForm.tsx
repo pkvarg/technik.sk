@@ -14,8 +14,9 @@ const CreateUserForm = () => {
         name,
         email,
       });
-      console.log(res);
-      //if (res.statusText === 'OK') toast.success('Užívateľ vytvorený');
+      if (res.data === 'ok') {
+        toast.success('Užívateľ vytvorený');
+      }
     } catch (error: any) {
       console.log(error);
       toast.error(error.message);

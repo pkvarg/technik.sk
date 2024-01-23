@@ -6,10 +6,6 @@ import AdminBoard from '../components/AdminBoard';
 
 const Admin = async () => {
   const session = await getServerSession(authOptions);
-  // const name = session?.user?.name ? session.user.name.toString() : 'user';
-  // const email = session?.user?.email?.toString();
-
-  //console.log('admin session', name);
   return (
     <div className="h-[100vh] bg-[#0d0e2f]">
       {!session ? (

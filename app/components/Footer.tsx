@@ -81,7 +81,7 @@ const Footer = () => {
               Kontakt
             </Link>
             <Link
-              href={'/admin'}
+              href={'/technik'}
               className="cursor-pointer hover:text-[#1f8851]"
             >
               Admin

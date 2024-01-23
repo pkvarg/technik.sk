@@ -1,24 +1,27 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { MdDeleteOutline } from 'react-icons/md';
 
-const MyProfile = (myUser: any) => {
-  console.log('myprof', myUser);
+interface MyProfileProps {
+  myUser: any;
+  amIroot: boolean;
+  setKey: any;
+}
+
+const MyProfile: React.FC<MyProfileProps> = ({ myUser, amIroot, setKey }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isAdmin, setIsAdmin] = useState(false);
 
-  console.log('email', email);
-
   useEffect(() => {
     if (myUser) {
-      setName(myUser.myUser.name);
-      setEmail(myUser.myUser.email);
-
-      setIsAdmin(myUser.myUser.isAdmin);
+      setName(myUser.name);
+      setEmail(myUser.email);
+      setIsAdmin(myUser.isAdmin);
     }
   }, [myUser]);
 
@@ -30,8 +33,24 @@ const MyProfile = (myUser: any) => {
       password,
       isAdmin,
     });
+    if (res.statusText === 'OK') {
+      setKey((prev: number) => prev + 1);
+      toast.success('Užívateľ upravený');
+    }
+  };
 
-    console.log('edit', res);
+  const handleDelete = async () => {
+    let result = confirm('Naozaj?');
+    if (result) {
+      const res = await axios.delete(`api/user/${email}`);
+      if (res.data === 'USER DELETED') {
+        toast.success('Užívateľ zmazaný');
+        setKey((prev: number) => prev + 1);
+      }
+    } else {
+      // User clicked "Cancel"
+      // Handle the cancellation
+    }
   };
 
   return (
@@ -40,9 +59,19 @@ const MyProfile = (myUser: any) => {
       className="flex w-[200px] flex-col gap-2 text-black"
     >
       <h1 className="my-4 text-center text-[25px] leading-[25px] text-yellow-500">
-        Môj profil
+        Profil
+        {/* <span className="ml-2 text-[18px] text-green-500">{email}</span> */}
       </h1>
-      <label className="text-white">Meno</label>
+      <div className="flex flex-row justify-between">
+        <label className="text-white">Meno</label>
+        {amIroot && (
+          <MdDeleteOutline
+            onClick={() => handleDelete()}
+            className="mb-1 cursor-pointer text-[20px] text-red-500"
+          />
+        )}
+      </div>
+
       <input
         type="text"
         placeholder="Meno"

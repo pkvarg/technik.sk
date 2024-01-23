@@ -4,13 +4,18 @@ import SignOutButton from '../components/SignOutButton';
 import CreateUserForm from '../components/CreateUserForm';
 import Subscribers from './Subscribers';
 import MyProfile from './MyProfile';
+import AllUsers from './admin/AllUsers';
 import axios from 'axios';
 
 const AdminBoard = (user: any) => {
   const [showCreateUser, setShowCreateUser] = useState(false);
   const [showSubscribers, setShowSubscribers] = useState(false);
   const [showMyProfile, setShowMyProfile] = useState(false);
+  const [showAllUsers, setShowAllUsers] = useState(false);
   const [myUser, setMyUser] = useState({});
+  const [allUsers, setAllUsers] = useState([]);
+  const [amIroot, setAmIroot] = useState(false);
+  const [key, setKey] = useState(0);
 
   const email = user.user.email.toString();
 
@@ -19,12 +24,28 @@ const AdminBoard = (user: any) => {
       const res = await axios.get(`api/user/${email}`);
 
       if (res) {
-        console.log('res', res.data);
         setMyUser(res.data);
+        if (res.data.isRoot) setAmIroot(true);
       }
     };
     getUser();
-  }, []);
+  }, [key]);
+
+  useEffect(() => {
+    const getAllUsers = async () => {
+      const res = await axios.get(`api/user/all`);
+
+      if (res) {
+        setAllUsers(res.data);
+      }
+    };
+    getAllUsers();
+  }, [key]);
+
+  useEffect(() => {
+    setShowAllUsers(false);
+    setShowMyProfile(false);
+  }, [key]);
 
   return (
     <div className="relative h-screen">
@@ -52,6 +73,14 @@ const AdminBoard = (user: any) => {
         >
           Môj profil{' '}
         </p>
+        {amIroot && (
+          <p
+            onClick={() => setShowAllUsers((prev) => !prev)}
+            className="cursor-pointer text-blue-100"
+          >
+            Užívatelia{' '}
+          </p>
+        )}
         <SignOutButton />
       </div>
 
@@ -87,7 +116,18 @@ const AdminBoard = (user: any) => {
           >
             X
           </p>
-          <MyProfile myUser={myUser} />
+          <MyProfile myUser={myUser} amIroot={amIroot} setKey={setKey} />
+        </div>
+      )}
+      {showAllUsers && (
+        <div className="absolute right-[33%]">
+          <p
+            onClick={() => setShowAllUsers(false)}
+            className="float-right cursor-pointer text-red-500"
+          >
+            X
+          </p>
+          <AllUsers allUsers={allUsers} amIroot={amIroot} setKey={setKey} />
         </div>
       )}
     </div>

@@ -77,3 +77,26 @@ export async function PUT(req: Request, context: any) {
     }
   }
 }
+
+export async function DELETE(req: Request, context: any) {
+  if (req.method !== 'DELETE') {
+    return NextResponse.json({ message: 'Wrong method!' });
+  }
+
+  const { params } = context;
+  const { email } = params;
+
+  try {
+    console.log('DELETE', email);
+    const user = await prisma.user.delete({
+      where: {
+        email: email,
+      },
+    });
+
+    return NextResponse.json('USER DELETED');
+  } catch (error) {
+    console.log(error);
+    return NextResponse.json({ error });
+  }
+}
