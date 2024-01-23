@@ -28,7 +28,7 @@ const MailingList = () => {
         placeholder="Zadajte svoj email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="mt-8 w-[25%] py-1 pl-1 text-[#0d0d0e]"
+        className="mt-8 w-[100%] py-1 pl-1 text-[#0d0d0e] lg:w-[25%]"
       />
       <button
         onClick={subscribe}

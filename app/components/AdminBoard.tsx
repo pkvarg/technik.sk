@@ -6,6 +6,7 @@ import Subscribers from './Subscribers';
 import MyProfile from './MyProfile';
 import AllUsers from './admin/AllUsers';
 import axios from 'axios';
+import Link from 'next/link';
 
 const AdminBoard = (user: any) => {
   const [showCreateUser, setShowCreateUser] = useState(false);
@@ -49,11 +50,14 @@ const AdminBoard = (user: any) => {
 
   return (
     <div className="relative h-screen">
-      <div className="flex w-[20%] flex-col gap-1 bg-gray-600 p-1 text-green-500">
+      <div className="flex w-[100%] flex-col gap-1 bg-gray-600 p-1 text-green-500 lg:w-[20%]">
         <h1 className="text-[25px] text-white">
           Ahoj
           <span className="pl-2  text-yellow-500">{user.user.name}</span>
         </h1>
+        <Link href={'/'} className="cursor-pointer text-white">
+          Domov
+        </Link>
         <p
           onClick={() => setShowCreateUser((prev) => !prev)}
           className="cursor-pointer"
@@ -85,7 +89,7 @@ const AdminBoard = (user: any) => {
       </div>
 
       {showCreateUser && (
-        <div className="absolute right-[33%]">
+        <div className="absolute right-[15%] lg:right-[33%]">
           <p
             onClick={() => setShowCreateUser(false)}
             className="float-right cursor-pointer text-red-500"
@@ -97,7 +101,7 @@ const AdminBoard = (user: any) => {
       )}
 
       {showSubscribers && (
-        <div className="absolute right-[33%]">
+        <div className="absolute right-[15%] lg:right-[33%]">
           <p
             onClick={() => setShowSubscribers(false)}
             className="float-right cursor-pointer text-red-500"
@@ -109,7 +113,7 @@ const AdminBoard = (user: any) => {
       )}
 
       {showMyProfile && (
-        <div className="absolute right-[33%]">
+        <div className="absolute right-[19.5%] lg:right-[33%]">
           <p
             onClick={() => setShowMyProfile(false)}
             className="float-right cursor-pointer text-red-500"
@@ -120,7 +124,7 @@ const AdminBoard = (user: any) => {
         </div>
       )}
       {showAllUsers && (
-        <div className="absolute right-[33%]">
+        <div className="absolute right-[15%] lg:right-[33%]">
           <p
             onClick={() => setShowAllUsers(false)}
             className="float-right cursor-pointer text-red-500"

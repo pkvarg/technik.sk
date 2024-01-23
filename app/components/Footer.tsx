@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <div className="flex flex-col bg-[#0d0d0e] py-8 text-white">
-      <div className="mx-4 flex flex-row items-start justify-between lg:mx-[18.5%] ">
+      <div className="mx-4 flex flex-col items-start justify-between lg:mx-[18.5%] lg:flex-row ">
         <div className="flex flex-col gap-1">
           <div className="flex flex-col lg:flex-row">
             <p className="mr-[5px]">
@@ -36,7 +36,7 @@ const Footer = () => {
             &copy; {Date().substring(11, 15)} Komorný orchester Technik
           </p>
           {/* <p>Sledujte nás</p> */}
-          <div className="flex flex-col lg:flex-row lg:items-center lg:gap-4">
+          <div className="flex flex-row items-center gap-4">
             <a
               href="https://www.facebook.com/orchester.technik"
               target="_blank"
@@ -63,7 +63,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div>
+        <div className="mt-4 lg:mt-0">
           <div
             className="flex flex-col text-[20px]
            font-bold"

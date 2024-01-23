@@ -56,7 +56,7 @@ const Navbar = () => {
                 navbar ? 'block' : 'hidden'
               }`}
             >
-              <ul className="justify-center space-y-8 text-[20px] md:flex md:space-x-6 md:space-y-0 lg:text-[20px]">
+              <ul className="justify-center space-y-2 text-[20px] md:flex md:space-x-6 md:space-y-0 lg:space-y-0 lg:text-[20px]">
                 <li>
                   <Link
                     href={'/'}
@@ -67,7 +67,7 @@ const Navbar = () => {
                 </li>
 
                 <div className="group relative  cursor-pointer">
-                  <div className="flex items-center justify-between  px-4">
+                  <div className="flex items-center justify-between lg:px-4">
                     <a className="menu-hover hover:text-green-500">O nás</a>
                   </div>
                   <div className="invisible absolute z-50 flex w-max flex-col  bg-black px-4 py-1 text-white shadow-xl group-hover:visible">

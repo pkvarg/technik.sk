@@ -26,8 +26,8 @@ const Contact = () => {
       try {
         console.log('..email is sending..');
         const { data } = await axios.put(
-          `https://api.pictusweb.com/api/md/contact`,
-          // `http://localhost:2000/api/md/contact`,
+          `https://tss.pictusweb.com/technik/contact`,
+          //`http://localhost:3010/technik/contact`,
           {
             name,
             email,
@@ -36,7 +36,7 @@ const Contact = () => {
           },
         );
 
-        if (data.status === 'Success') toast.success('Správa úspešne odoslaná');
+        if (data === 'Success') toast.success('Správa úspešne odoslaná');
         setName('');
         setEmail('');
         setPhone('');
@@ -48,7 +48,7 @@ const Contact = () => {
     }
   };
   return (
-    <div className="bg-homeblackbg relative text-[#0376b7]">
+    <div className="relative bg-homeblackbg text-[#0376b7]">
       <div className="">
         <Navbar />
       </div>
@@ -140,7 +140,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="mt-4 w-[50%] rounded-[25px] border-2 border-[#0376b7] pb-1 pt-2 text-[#0376b7]  hover:bg-[#0376b7] hover:text-white lg:mt-4 lg:w-[25%]"
+              className="my-8 w-[100%] rounded-[25px] border-2 border-[#0376b7] pt-2 text-[#0376b7] hover:bg-[#0376b7] hover:text-white lg:w-[25%] lg:pb-1"
             >
               Odoslať
             </button>

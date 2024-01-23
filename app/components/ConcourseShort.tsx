@@ -10,21 +10,23 @@ const ConcourseShort = () => {
         Hráš na sláčikovom nástroji?
       </h1>
       <div className="text-[20px]">
-        <div className="my-8 flex flex-row items-center gap-16">
+        <div className="my-8 flex flex-col items-center gap-16 lg:flex-row">
           <Image
             src={'/concourse01rm.png'}
             alt="instrument"
             width={500}
             height={500}
-            className="w-[35%]"
+            className="w-[100%] lg:w-[35%]"
           />
 
           <div className="flex flex-col gap-2">
-            <p className="text-[35px]">Príď medzi nás!</p>
+            <p className="text-center text-[35px]">Príď medzi nás!</p>
             <p>Privítame posily: husle, viola, čelo, kontrabas.</p>
             <div>
               <Link href={'/actual#concourse'}>
-                <p className="cursor-pointer text-yellow-500">Viac info</p>
+                <p className="cursor-pointer text-center text-yellow-500">
+                  Viac info
+                </p>
               </Link>
             </div>
           </div>
