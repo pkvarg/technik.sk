@@ -48,12 +48,14 @@ const Contact = () => {
     }
   };
   return (
-    <div className="relative bg-homeblackbg text-[#0376b7]">
+    <div className="relative bg-[#0d0e2f] text-[#0376b7]">
       <div className="">
         <Navbar />
       </div>
       <div className="z-10 flex-1 text-[14px]">
-        <h1 className="text-center text-[30px] font-bold">Kontaktujte nás</h1>
+        <h1 className="text-center text-[30px] font-bold text-green-500">
+          Kontaktujte nás
+        </h1>
         <div className="mx-4 pt-2  lg:mx-[32.5%] lg:py-8">
           <form onSubmit={handleSubmit} className="flex flex-col">
             <div className="flex flex-col justify-start">
@@ -140,7 +142,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="my-8 w-[100%] rounded-[25px] border-2 border-[#0376b7] pt-2 text-[#0376b7] hover:bg-[#0376b7] hover:text-white lg:w-[25%] lg:pb-1"
+              className="my-8 w-[100%] rounded-[25px] border-2 border-[#0376b7] pb-2.5 pt-3 text-[#0376b7] hover:bg-[#0376b7] hover:text-white lg:w-[25%] lg:pb-1"
             >
               Odoslať
             </button>

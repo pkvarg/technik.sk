@@ -22,10 +22,11 @@ const Actual = () => {
   return (
     <div className="bg-black text-white">
       <Navbar />
+      <div id="concourse"></div>
       <h1 className="pb-16 pt-4 text-center text-[30px] text-yellow-500">
         Aktuálne
       </h1>
-      <div id="concourse">
+      <div>
         <ConcourseFull />
       </div>
     </div>

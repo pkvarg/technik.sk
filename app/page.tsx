@@ -1,12 +1,11 @@
 import Image from 'next/image';
 import Navbar from './components/Navbar';
+import NewEvents from './components/shorts/NewEvents';
 import MailingList from './components/MailingList';
-import Navbar1 from './components/Navbar1';
-import Carousel from './components/Carousel';
-import ConcourseShort from './components/ConcourseShort';
+import ConcourseShort from './components/shorts/ConcourseShort';
 
 export default function Home() {
-  const slides = ['/techhero.jpg', '/techslide2.png', '/techslide3.jpg'];
+  // const slides = ['/techhero.jpg', '/techslide2.png', '/techslide3.jpg'];
 
   return (
     <main className="relative  bg-[#0d0e2f]">
@@ -23,10 +22,11 @@ export default function Home() {
           Technik
         </h2>
       </div>
+      <NewEvents />
       <MailingList />
-      <div className="m-auto w-[75%]">
+      {/* <div className="m-auto w-[75%]">
         <Carousel slides={slides} />
-      </div>
+      </div> */}
       <ConcourseShort />
     </main>
   );
