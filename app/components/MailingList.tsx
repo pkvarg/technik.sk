@@ -50,7 +50,7 @@ const MailingList = () => {
         </div>
         {showAgree && (
           <p className="mt-4 text-[17.5px] leading-[17.5px] text-[#0376b7]">
-            Poskytnuté údaje nebudú zdieľané tretím stranám.
+            Údaje nezdieľame tretím stranám.
           </p>
         )}
 

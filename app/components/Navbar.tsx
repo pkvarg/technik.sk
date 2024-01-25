@@ -79,31 +79,31 @@ const Navbar = () => {
                       Kto sme
                     </Link>
                     <Link
-                      href={'/contact'}
+                      href={'/about'}
                       className="cursor-pointer hover:text-green-500"
                     >
                       Repertoár
                     </Link>
                     <Link
-                      href={'/contact'}
+                      href={'/about'}
                       className="cursor-pointer hover:text-green-500"
                     >
                       Členovia
                     </Link>
                     <Link
-                      href={'/contact'}
+                      href={'/about'}
                       className="cursor-pointer hover:text-green-500"
                     >
                       Osobnosti
                     </Link>
                     <Link
-                      href={'/contact'}
+                      href={'/about'}
                       className="cursor-pointer hover:text-green-500"
                     >
                       Zájazdy
                     </Link>
                     <Link
-                      href={'/contact'}
+                      href={'/about'}
                       className="cursor-pointer hover:text-green-500"
                     >
                       História

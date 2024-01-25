@@ -58,7 +58,7 @@ const NewEvents = () => {
             <MdDownload className="text-[25px]" />
           </div>
         </div>
-        <div className="w-[100%] lg:w-[45%]">
+        <div className="w-[100%] lg:w-[35%] 2xl:w-[27.5%]">
           <Image
             src={'/20231219event.jpg'}
             alt="orchester technik"

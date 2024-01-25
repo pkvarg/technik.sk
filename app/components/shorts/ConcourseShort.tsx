@@ -16,7 +16,7 @@ const ConcourseShort = () => {
             alt="instrument"
             width={500}
             height={500}
-            className="w-[80%] lg:w-[35%]"
+            className="w-[80%] lg:w-[35%] 2xl:w-[30%]"
           />
 
           <div className="flex flex-col gap-2">
