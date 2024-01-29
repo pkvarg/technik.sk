@@ -37,8 +37,11 @@ const Subscribers = () => {
       </h1>
       {subscribers &&
         subscribers.map((subscriber: any) => (
-          <div className="flex flex-row items-center justify-between">
-            <p key={subscriber?.id}>{subscriber.email}</p>
+          <div
+            key={subscriber?.id}
+            className="flex flex-row items-center justify-between"
+          >
+            <p>{subscriber.email}</p>
             <p
               onClick={() => deleteSubscriber(subscriber.id)}
               className="cursor-pointer text-red-500"
