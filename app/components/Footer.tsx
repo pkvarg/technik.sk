@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <div className="flex flex-col bg-[#0d0d0e] py-8 text-white">
+    <div className="flex flex-col bg-[#4c230e] py-8 text-white">
       <div className="mx-4 flex flex-col items-start justify-between lg:mx-[18.5%] lg:flex-row ">
         <div className="flex flex-col gap-1">
           <div className="flex flex-col lg:flex-row">
@@ -70,19 +70,19 @@ const Footer = () => {
           >
             <Link
               href={'/contact'}
-              className="cursor-pointer hover:text-[#1f8851]"
+              className="cursor-pointer hover:text-yellow-500"
             >
               Partneri
             </Link>
             <Link
               href={'/contact'}
-              className="cursor-pointer hover:text-[#1f8851]"
+              className="cursor-pointer hover:text-yellow-500"
             >
               Kontakt
             </Link>
             <Link
               href={'/technik'}
-              className="cursor-pointer hover:text-[#1f8851]"
+              className="cursor-pointer hover:text-yellow-500"
             >
               Admin
             </Link>

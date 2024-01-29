@@ -1,9 +1,12 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import toast from 'react-hot-toast';
+import { FaRegTrashAlt } from 'react-icons/fa';
 
 const Subscribers = () => {
   const [subscribers, setSubscribers] = useState([]);
+  const [key, setKey] = useState(0);
 
   useEffect(() => {
     const getSubscribers = async () => {
@@ -12,9 +15,20 @@ const Subscribers = () => {
     };
 
     getSubscribers();
-  }, []);
+  }, [key]);
 
-  console.log('subs', subscribers);
+  const deleteSubscriber = async (id: string) => {
+    try {
+      const res = await axios.delete(`api/subscribe/${id}`);
+      if (res.data === 'SUBSCRIBER DELETED') {
+        setKey((prev) => prev + 1);
+        toast.success('Vymazané');
+      }
+    } catch (error: any) {
+      console.log(error);
+      toast.error(error.message);
+    }
+  };
 
   return (
     <div>
@@ -23,7 +37,15 @@ const Subscribers = () => {
       </h1>
       {subscribers &&
         subscribers.map((subscriber: any) => (
-          <p key={subscriber?.id}>{subscriber.email}</p>
+          <div className="flex flex-row items-center justify-between">
+            <p key={subscriber?.id}>{subscriber.email}</p>
+            <p
+              onClick={() => deleteSubscriber(subscriber.id)}
+              className="cursor-pointer text-red-500"
+            >
+              <FaRegTrashAlt />
+            </p>
+          </div>
         ))}
     </div>
   );

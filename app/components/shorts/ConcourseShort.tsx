@@ -5,8 +5,8 @@ Image;
 
 const ConcourseShort = () => {
   return (
-    <div className="mx-4 py-12 text-white lg:mx-[20%]">
-      <h1 className="text-center text-[35px] text-green-500">
+    <div className="bg-[#050505] px-4 py-12 text-white lg:px-[20%]">
+      <h1 className="text-center text-[35px] text-yellow-300">
         Hráš na sláčikovom nástroji?
       </h1>
       <div className="text-[20px]">

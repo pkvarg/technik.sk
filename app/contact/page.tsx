@@ -48,14 +48,12 @@ const Contact = () => {
     }
   };
   return (
-    <div className="relative bg-[#0d0e2f] text-[#0376b7]">
+    <div className="relative bg-[#050505] text-yellow-500">
       <div className="">
         <Navbar />
       </div>
       <div className="z-10 flex-1 text-[14px]">
-        <h1 className="text-center text-[30px] font-bold text-green-500">
-          Kontaktujte nás
-        </h1>
+        <h1 className="text-center text-[30px] font-bold">Kontaktujte nás</h1>
         <div className="mx-4 pt-2  lg:mx-[32.5%] lg:py-8">
           <form onSubmit={handleSubmit} className="flex flex-col">
             <div className="flex flex-col justify-start">
@@ -67,7 +65,7 @@ const Contact = () => {
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="h-[40px] border border-gray-300 pl-[5px]"
+                className="h-[40px] border border-gray-300 pl-[5px] text-[20px] text-[#050505]"
                 required
               />
             </div>
@@ -80,7 +78,7 @@ const Contact = () => {
                 type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="h-[40px] border border-gray-300 pl-[5px]"
+                className="h-[40px] border border-gray-300 pl-[5px] text-[20px] text-[#050505]"
                 required
               />
             </div>
@@ -93,7 +91,7 @@ const Contact = () => {
                 type="text"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="h-[40px] border border-gray-300 pl-[5px]"
+                className="h-[40px] border border-gray-300 pl-[5px] text-[20px] text-[#050505]"
                 required
               />
             </div>
@@ -105,7 +103,7 @@ const Contact = () => {
               <textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="h-[100px] border border-gray-300 pl-[5px] lg:h-[130px]"
+                className="h-[100px] border border-gray-300 pl-[5px] text-[20px] text-[#050505] lg:h-[130px]"
                 rows={10}
               ></textarea>
             </div>
@@ -121,7 +119,7 @@ const Contact = () => {
                 </span>
               </p>
               {showAgree && (
-                <p className="text-[17.5px] leading-[17.5px] text-[#0376b7]">
+                <p className="text-[17.5px] leading-[17.5px] text-[#ffffff]">
                   Poskytnuté údaje nebudú zdieľané tretím stranám.
                 </p>
               )}
@@ -142,7 +140,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="my-8 w-[100%] rounded-[25px] border-2 border-[#0376b7] pb-2.5 pt-3 text-[#0376b7] hover:bg-[#0376b7] hover:text-white lg:w-[25%] lg:pb-1"
+              className="my-8 w-[100%] rounded-[25px] border-2 border-yellow-500 pb-2.5 pt-3 text-yellow-500 hover:bg-yellow-500 hover:text-white lg:w-[25%] lg:pb-2"
             >
               Odoslať
             </button>

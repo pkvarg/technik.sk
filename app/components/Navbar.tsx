@@ -60,7 +60,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     href={'/'}
-                    className="cursor-pointer hover:text-green-500"
+                    className="cursor-pointer hover:text-yellow-500"
                   >
                     Domov
                   </Link>
@@ -68,43 +68,43 @@ const Navbar = () => {
 
                 <div className="group relative  cursor-pointer">
                   <div className="flex items-center justify-between lg:px-4">
-                    <a className="menu-hover hover:text-green-500">O nás</a>
+                    <a className="menu-hover hover:text-yellow-500">O nás</a>
                   </div>
                   <div className="invisible absolute z-50 flex w-max flex-col  bg-black px-4 py-1 text-white shadow-xl group-hover:visible">
                     {/* <a className="my-2 block py-1  md:mx-2">Product</a> */}
                     <Link
                       href={'/about'}
-                      className="cursor-pointer hover:text-green-500"
+                      className="cursor-pointer hover:text-yellow-500"
                     >
                       Kto sme
                     </Link>
                     <Link
                       href={'/about'}
-                      className="cursor-pointer hover:text-green-500"
+                      className="cursor-pointer hover:text-yellow-500"
                     >
                       Repertoár
                     </Link>
                     <Link
                       href={'/about'}
-                      className="cursor-pointer hover:text-green-500"
+                      className="cursor-pointer hover:text-yellow-500"
                     >
                       Členovia
                     </Link>
                     <Link
                       href={'/about'}
-                      className="cursor-pointer hover:text-green-500"
+                      className="cursor-pointer hover:text-yellow-500"
                     >
                       Osobnosti
                     </Link>
                     <Link
                       href={'/about'}
-                      className="cursor-pointer hover:text-green-500"
+                      className="cursor-pointer hover:text-yellow-500"
                     >
                       Zájazdy
                     </Link>
                     <Link
                       href={'/about'}
-                      className="cursor-pointer hover:text-green-500"
+                      className="cursor-pointer hover:text-yellow-500"
                     >
                       História
                     </Link>
@@ -114,7 +114,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     href={'/gallery'}
-                    className="cursor-pointer hover:text-green-500"
+                    className="cursor-pointer hover:text-yellow-500"
                   >
                     Galéria
                   </Link>
@@ -123,7 +123,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     href={'/contact'}
-                    className="cursor-pointer hover:text-[#1f8851]"
+                    className="cursor-pointer hover:text-yellow-500"
                   >
                     Kontakt
                   </Link>

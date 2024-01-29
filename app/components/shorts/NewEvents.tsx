@@ -21,8 +21,8 @@ const NewEvents = () => {
 
   // will be dynamic forEach event from DB
   return (
-    <div className="mx-4 py-24 text-white lg:mx-[20%]">
-      <h1 className="text-center text-[35px] text-green-500">
+    <div className=" bg-[#4c230e] px-4 py-24 text-[#ffffff] lg:px-[20%]">
+      <h1 className="text-center text-[35px] text-yellow-300">
         Pozvánka na vianočný koncert v utorok 19.12.2023
       </h1>
       <div className="my-8 flex flex-col items-center justify-center gap-8 lg:flex-row">
@@ -52,7 +52,7 @@ const NewEvents = () => {
           </p>
           <div
             onClick={() => downloadFile('20231219event.jpg')}
-            className="ml-auto mt-8 flex cursor-pointer flex-row items-center gap-2 text-[20px] text-yellow-300"
+            className="ml-auto mt-8 flex cursor-pointer flex-row items-center gap-2 text-[20px] text-[#987d50]"
           >
             <p>Plagát PDF</p>
             <MdDownload className="text-[25px]" />

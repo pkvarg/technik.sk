@@ -17,7 +17,7 @@ const ConcourseFull = () => {
         </div>
         <div className="w-[80%] lg:w-[60%]">
           {' '}
-          <h1 className="text-center text-[25px] text-green-500">
+          <h1 className="text-center text-[25px] text-yellow-500">
             Príď medzi nás
           </h1>
           <p className="mt-2 text-justify">
