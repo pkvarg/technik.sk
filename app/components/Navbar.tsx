@@ -111,14 +111,40 @@ const Navbar = () => {
                   </div>
                 </div>
 
-                <li>
+                {/* <li>
                   <Link
                     href={'/gallery'}
                     className="cursor-pointer hover:text-yellow-500"
                   >
                     Galéria
                   </Link>
-                </li>
+                </li> */}
+
+                <div className="group relative  cursor-pointer">
+                  <div className="flex items-center justify-between lg:px-4">
+                    <a className="menu-hover hover:text-yellow-500">Galéria</a>
+                  </div>
+                  <div className="invisible absolute z-50 flex w-max flex-col  bg-black px-4 py-1 text-white shadow-xl group-hover:visible">
+                    <Link
+                      href={'/gallery'}
+                      className="cursor-pointer hover:text-yellow-500"
+                    >
+                      Fotky
+                    </Link>
+                    <Link
+                      href={'/audio'}
+                      className="cursor-pointer hover:text-yellow-500"
+                    >
+                      Audio
+                    </Link>
+                    <Link
+                      href={'/video'}
+                      className="cursor-pointer hover:text-yellow-500"
+                    >
+                      Video
+                    </Link>
+                  </div>
+                </div>
 
                 <li>
                   <Link

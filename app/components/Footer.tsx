@@ -69,7 +69,7 @@ const Footer = () => {
            font-bold"
           >
             <Link
-              href={'/contact'}
+              href={'/partners'}
               className="cursor-pointer hover:text-yellow-500"
             >
               Partneri
