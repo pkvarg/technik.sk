@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <div className="flex flex-col bg-[#4c230e] py-8 text-white">
-      <div className="mx-4 flex flex-col items-start justify-between lg:mx-[18.5%] lg:flex-row">
+      <div className="mx-4 flex flex-col items-start justify-between lg:mx-[20%] lg:flex-row 2xl:mx-[25%]">
         <div>
           <Image
             src="/logo_alb.png"

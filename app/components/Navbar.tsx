@@ -2,16 +2,21 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
+  const router = useRouter();
 
   return (
     <nav className="nav-font w-full font-bold text-white">
       <div className="mx-auto justify-between px-4 md:flex md:items-center md:px-8">
         <div className="mb-0 lg:mb-2">
           <div className="flex items-center justify-between py-3 md:block md:py-4">
-            <div className="flex flex-row items-center gap-4">
+            <div
+              onClick={() => router.push('/')}
+              className="flex cursor-pointer flex-row items-center gap-4"
+            >
               <Image
                 src="/logo_alb.png"
                 alt="technik"
@@ -102,7 +107,7 @@ const Navbar = () => {
                     Členovia
                   </Link>
                   <Link
-                    href={'/about'}
+                    href={'/personages'}
                     className="cursor-pointer hover:text-yellow-500"
                   >
                     Osobnosti
