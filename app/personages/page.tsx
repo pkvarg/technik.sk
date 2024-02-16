@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import Navbar from '../components/Navbar';
+import { FaMobile } from 'react-icons/fa';
 
 const Personages = () => {
   return (
@@ -10,25 +11,27 @@ const Personages = () => {
         <h1 className="mt-4 text-center text-[35px] text-yellow-500">
           Osobnosti
         </h1>
-        <div className="flex flex-col items-center justify-center gap-16 pb-16 pt-8 lg:flex-row lg:gap-8">
+        <div className="flex flex-col items-center justify-center gap-16 px-4 pb-16 pt-8 lg:flex-row lg:gap-[15%] lg:px-[20%] xl:px-[20%] 2xl:gap-[20%]">
           <div>
             <Image
               src={'/Mirko00.jpg'}
               height={500}
               width={500}
               alt="Mirko Krajci"
-              className="w-[100%] px-4 lg:w-[75%] lg:px-0"
+              className="w-[100%] px-4 lg:w-[450px] lg:px-0"
             />
           </div>
-          <div>
-            <h1 className="text-[55px] text-yellow-500">Mirko Krajči</h1>
-            <h2 className="-mt-4 text-[25px] text-yellow-500">
+          <div className="">
+            <h1 className="text-center text-[55px] leading-[45px] text-yellow-500">
+              Mirko Krajči
+            </h1>
+            <h2 className="mt-4 text-center text-[25px] leading-[25px] text-yellow-500">
               umelecký vedúci, dirigent
             </h2>
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-4 bg-white px-4 py-12 text-justify text-[20px] lg:px-[20%] 2xl:px-[25%]">
+      <div className="flex flex-col gap-4 bg-white px-4 py-12 text-justify text-[20px] lg:px-[20%] xl:px-[20%] 2xl:px-[25%] ">
         <p>
           Je laureátom medzinárodnej dirigentskej súťaže „Maestro Silva Pereira
           Prize“, Porto (Portugalsko, 2002) a Medzinárodnej skladateľskej
@@ -55,22 +58,45 @@ const Personages = () => {
           prémií.{' '}
         </p>
       </div>
-      <div className="mx-[20%] flex flex-col items-center justify-center gap-16 pb-16 pt-8 lg:flex-row lg:gap-8">
+      {/* desktop */}
+      <div className="hidden flex-col items-center justify-center gap-16 px-4 pb-16 pt-8 lg:flex lg:flex-row lg:gap-[15%] lg:px-[20%]  2xl:px-[25%]">
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="text-center text-[55px] leading-[55px] text-yellow-500 lg:px-0 lg:text-[55px]">
+            František Török
+          </h1>
+          <h2 className="mt-4 text-[25px] leading-[25px] text-yellow-500">
+            hudobný pedagóg
+          </h2>
+        </div>
         <div>
           <Image
             src={'/Torok00.jpg'}
             height={500}
             width={500}
             alt="Frantisek Torok"
-            className="w-[100%] px-4 lg:w-[75%] lg:px-0"
+            className="w-[100%] px-0 lg:w-[450px] lg:px-0"
+          />
+        </div>
+      </div>
+      {/* mobile */}
+      <div className="flex flex-col items-center justify-center gap-16 px-4 pb-16 pt-8 lg:hidden">
+        <div>
+          <Image
+            src={'/Torok00.jpg'}
+            height={500}
+            width={500}
+            alt="Frantisek Torok"
+            className="w-[100%] px-0 lg:w-[75%] lg:px-0"
           />
         </div>
         <div>
-          <h1 className="text-[55px] text-yellow-500">František Török</h1>
-          <h2 className="-mt-4 text-[25px] text-yellow-500">hudobný pedagóg</h2>
+          <h1 className="text-[45px] leading-[45px] text-yellow-500 lg:px-0 lg:text-[55px]">
+            František Török
+          </h1>
+          <h2 className="mt-2 text-[25px] text-yellow-500">hudobný pedagóg</h2>
         </div>
       </div>
-      <div className="flex flex-col gap-4 bg-white px-4 py-12 text-justify text-[20px] lg:px-[20%] 2xl:px-[25%]">
+      <div className="flex flex-col gap-4 bg-white px-4 py-12 text-justify text-[20px] lg:px-[20%] xl:px-[20%]  2xl:px-[25%]">
         <p>
           Študoval na Štátnom konzervatóriu v Bratislave, u prof. Andrey
           Šestákovej, absolventky Konzervatória v Moskve, v majstrovskej triede
@@ -93,6 +119,44 @@ const Personages = () => {
           Amadé v Salzburgu. Pedagogicky pôsobí na konzervatóriu v Bratislave,
           kde vyučuje hru na husliach a komornú hru. Od roku 2007 spolupracuje s
           Komorným orchestrom Technik ako hudobný pedagóg.
+        </p>
+      </div>
+
+      <div className="flex flex-col items-center justify-center gap-8 px-4 pb-16 pt-8 lg:flex-row lg:gap-[15%] lg:px-[20%] xl:px-[20%] 2xl:px-[25%]">
+        <div>
+          <Image
+            src={'/leginus.jpg'}
+            height={1000}
+            width={1000}
+            alt="Martin Leginus"
+            className="h-auto w-[100%] px-0 lg:w-[450px] lg:px-0"
+          />
+        </div>
+        <div>
+          <h1 className="text-center text-[55px] leading-[55px] text-yellow-500 lg:px-0 lg:text-[55px]">
+            Martin Leginus
+          </h1>
+          <h2 className="left-[25px] mt-4 text-[25px] text-yellow-500">
+            dirigent v období 1999 – 2007
+          </h2>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-4 bg-white px-4 py-12 text-justify text-[20px] lg:px-[20%] xl:px-[20%] 2xl:px-[25%]">
+        <p>
+          Študoval na Štátnom konzervatóriu v Bratislave (Z. Bílek) a na VŠMU v
+          Bratislave (O. Lenárd, B. Juhaňáková, P. Feranec). V roku 2004
+          absolvoval majstrovské dirigentské kurzy pod vedením Kurta Mazura.
+        </p>
+        <p>
+          Od r. 2006 pôsobí v Slovenskom národnom divadle. V rokoch 2013 až 2016
+          bol hudobným riaditeľom Štátnej opery v Prahe. V sezóne 2015/2016 bol
+          hlavným hosťujúcim dirigentom Pražského komorného orchestra. V rokoch
+          2018 až 2022 bol stálym hosťujúcim dirigentom Štátneho komorného
+          orchestra v Žiline. Dirigoval v mnohých koncertných sálach s
+          významnými orchestrami a sólistami. Počas svojej kariéry uviedol celý
+          rad svetových operných titulov. Od roku 2023 je riaditeľom Opery
+          Slovenského národného divadla.
         </p>
       </div>
     </div>
