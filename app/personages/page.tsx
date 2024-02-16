@@ -11,6 +11,7 @@ const Personages = () => {
         <h1 className="mt-4 text-center text-[35px] text-yellow-500">
           Osobnosti
         </h1>
+        {/* Krajci */}
         <div className="flex flex-col items-center justify-center gap-16 px-4 pb-16 pt-8 lg:flex-row lg:gap-[15%] lg:px-[20%] xl:px-[20%] 2xl:gap-[20%]">
           <div>
             <Image
@@ -58,7 +59,7 @@ const Personages = () => {
           prémií.{' '}
         </p>
       </div>
-      {/* desktop */}
+      {/* desktop Torok */}
       <div className="hidden flex-col items-center justify-center gap-16 px-4 pb-16 pt-8 lg:flex lg:flex-row lg:gap-[15%] lg:px-[20%]  2xl:px-[25%]">
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-center text-[55px] leading-[55px] text-yellow-500 lg:px-0 lg:text-[55px]">
@@ -78,7 +79,7 @@ const Personages = () => {
           />
         </div>
       </div>
-      {/* mobile */}
+      {/* mobile Torok */}
       <div className="flex flex-col items-center justify-center gap-16 px-4 pb-16 pt-8 lg:hidden">
         <div>
           <Image
@@ -93,7 +94,9 @@ const Personages = () => {
           <h1 className="text-[45px] leading-[45px] text-yellow-500 lg:px-0 lg:text-[55px]">
             František Török
           </h1>
-          <h2 className="mt-2 text-[25px] text-yellow-500">hudobný pedagóg</h2>
+          <h2 className="mt-2 text-center text-[25px] text-yellow-500">
+            hudobný pedagóg
+          </h2>
         </div>
       </div>
       <div className="flex flex-col gap-4 bg-white px-4 py-12 text-justify text-[20px] lg:px-[20%] xl:px-[20%]  2xl:px-[25%]">
@@ -121,7 +124,7 @@ const Personages = () => {
           Komorným orchestrom Technik ako hudobný pedagóg.
         </p>
       </div>
-
+      {/* Leginus       */}
       <div className="flex flex-col items-center justify-center gap-8 px-4 pb-16 pt-8 lg:flex-row lg:gap-[15%] lg:px-[20%] xl:px-[20%] 2xl:px-[25%]">
         <div>
           <Image
@@ -136,7 +139,7 @@ const Personages = () => {
           <h1 className="text-center text-[55px] leading-[55px] text-yellow-500 lg:px-0 lg:text-[55px]">
             Martin Leginus
           </h1>
-          <h2 className="left-[25px] mt-4 text-[25px] text-yellow-500">
+          <h2 className="left-[25px] mt-4 text-center text-[25px] text-yellow-500">
             dirigent v období 1999 – 2007
           </h2>
         </div>
@@ -158,6 +161,150 @@ const Personages = () => {
           rad svetových operných titulov. Od roku 2023 je riaditeľom Opery
           Slovenského národného divadla.
         </p>
+      </div>
+      {/* desktop Pragant */}
+      <div className="hidden flex-col items-center justify-center gap-16 px-4 pb-16 pt-8 lg:flex lg:flex-row lg:gap-[15%] lg:px-[20%]  2xl:px-[25%]">
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="text-center text-[55px] leading-[55px] text-yellow-500 lg:px-0 lg:text-[55px]">
+            Prof. Ján Pragant
+          </h1>
+          <h2 className="mt-4 text-center text-[25px] leading-[25px] text-yellow-500">
+            dirigent a umelecký vedúci <br />v období 1986 – 1996
+          </h2>
+        </div>
+        <div>
+          <Image
+            src={'/pragant.webp'}
+            height={500}
+            width={500}
+            alt="jan pragant"
+            className="w-[100%] px-0 lg:w-[450px]"
+          />
+        </div>
+      </div>
+      {/* mobile Pragant */}
+      <div className="flex flex-col items-center justify-center gap-16 px-4 pb-16 pt-8 lg:hidden">
+        <div>
+          <Image
+            src={'/pragant.webp'}
+            height={500}
+            width={500}
+            alt="jan pragant"
+            className="w-[100%] px-0 lg:w-[75%] lg:px-0"
+          />
+        </div>
+        <div>
+          <h1 className="text-[45px] leading-[45px] text-yellow-500 lg:px-0 lg:text-[55px]">
+            Prof. Ján Pragant
+          </h1>
+          <h2 className="mt-2 text-center text-[25px] text-yellow-500">
+            dirigent a umelecký vedúci v období 1986 – 1996
+          </h2>
+        </div>
+      </div>
+      <div className="flex flex-col gap-4 bg-white px-4 py-12 text-justify text-[20px] lg:px-[20%] xl:px-[20%]  2xl:px-[25%]">
+        <p>
+          Významná osobnosť slovenského hudobného života, orchestrálny hráč,
+          koncertný majster a znalec orchestrálnej tvorby, pedagóg na Štátnom
+          konzervatóriu v Bratislave. V Komornom orchestri Technik pôsobil ako
+          umelecký vedúci a dirigent počas jednej dekády. Pod vedením prof. Jána
+          Praganta (1912-2000) prezentoval Komorný orchester Technik svoje
+          umenie na mnohých vystúpeniach doma i v zahraničí. Vďaka nemu úspešne
+          obhajoval meno jedného z najlepších neprofesionálnych hudobných telies
+          na Slovensku.
+        </p>
+        <p>
+          25. mája 2000 nás prof. Pragant navždy opustil. Česť jeho pamiatke!
+        </p>
+      </div>
+
+      {/* Drmola       */}
+      <div className="flex flex-col items-center justify-center gap-8 px-4 pb-16 pt-8 lg:flex-row lg:gap-[15%] lg:px-[20%] xl:px-[20%] 2xl:px-[25%]">
+        <div>
+          <Image
+            src={'/drmola.jpg'}
+            height={1000}
+            width={1000}
+            alt="Jindrich Drmola"
+            className="h-auto w-[100%] px-0 lg:w-[450px]"
+          />
+        </div>
+        <div>
+          <h1 className="text-center text-[55px] leading-[55px] text-yellow-500 lg:px-0 lg:text-[55px]">
+            Jindřich Drmola
+          </h1>
+          <h2 className="left-[25px] mt-4 text-center text-[25px] text-yellow-500">
+            spoluzakladateľ a dirigent <br /> v období 1965 – 1986
+          </h2>
+        </div>
+      </div>
+      <div className="flex flex-col gap-4 bg-white px-4 py-12 text-justify text-[20px] lg:px-[20%] xl:px-[20%] 2xl:px-[25%]">
+        <p>
+          Jeden z dvojice zakladateľov Komorného orchestra Technik. Vďaka jeho
+          pôsobeniu sa orchester ako amatérske teleso postupne posúval na
+          profesionálnu úroveň. Pôsobil v ňom ako dirigent od jeho založenia do
+          roku 1986. Jindřich Drmola (1937-2022) následne pôsobil ako dirigent
+          vo viacerých ďalších hudobných telesách a to až do vysokého veku.
+        </p>
+        <p>
+          Dňa 24. marca 2022 nás pán Drmola navždy opustil. Česť jeho pamiatke!
+        </p>
+      </div>
+
+      {/* desktop Somora */}
+      <div className="hidden flex-col items-center justify-center gap-16 px-4 pb-16 pt-8 lg:flex lg:flex-row lg:gap-[15%] lg:px-[20%]  2xl:px-[25%]">
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="text-center text-[55px] leading-[55px] text-yellow-500 lg:px-0 lg:text-[55px]">
+            Zdeno Somora
+          </h1>
+          <h2 className="mt-4 text-center text-[25px] leading-[25px] text-yellow-500">
+            spoluzakladateľ a umelecký <br /> vedúci v období 1965-1990
+          </h2>
+        </div>
+        <div>
+          <Image
+            src={'/somora.webp'}
+            height={500}
+            width={500}
+            alt="zdeno somora"
+            className="w-[100%] px-0 lg:w-[450px]"
+          />
+        </div>
+      </div>
+      {/* mobile Somora */}
+      <div className="flex flex-col items-center justify-center gap-16 px-4 pb-16 pt-8 lg:hidden">
+        <div>
+          <Image
+            src={'/somora.webp'}
+            height={500}
+            width={500}
+            alt="zdeno somora"
+            className="w-[100%] px-0 lg:w-[75%] lg:px-0"
+          />
+        </div>
+        <div>
+          <h1 className="text-center text-[45px] leading-[45px] text-yellow-500 lg:px-0 lg:text-[55px]">
+            Zdeno Somora
+          </h1>
+          <h2 className="mt-2  text-center text-[25px] text-yellow-500">
+            spoluzakladateľ a umelecký <br /> vedúci v období 1965-1990
+          </h2>
+        </div>
+      </div>
+      <div className="flex flex-col gap-4 bg-white px-4 py-12 text-justify text-[20px] lg:px-[20%] xl:px-[20%]  2xl:px-[25%]">
+        <p>
+          Jeden z dvojice zakladateľov Komorného orchestra Technik. Spolu s
+          Jindřichom Drmolom postupne posúvali orchester ako amatérske teleso na
+          profesionálnu úroveň. Pôsobil v ňom ako umelecký vedúci od jeho
+          založenia do roku 1990. Zdeno Somora (1936-2014) získal titul
+          inžiniera na Strojníckej fakulte STU v Bratislave, potom pracoval v
+          cukrovarníckom priemysle na Slovensku, od r. 1988 ako generálny
+          riaditeľ v spoločnosti Cukor – cukrovinky v Bratislave. V roku 1990
+          založil Lions Klub Bratislava Istropolis a stal sa jeho Charter
+          prezidentom. V úradnom roku 1993/94 bol Past District guvernérom LCI –
+          Distriktu 122 Česká republika a Slovenská republika.
+        </p>
+        <p>10 marca 2014 nás pán Somora navždy opustil. Česť jeho pamiatke!</p>
       </div>
     </div>
   );
